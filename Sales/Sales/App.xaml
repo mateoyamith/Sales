@@ -9,7 +9,10 @@
             
             <!--Locator-->
             <infra:InstanceLocator x:Key="Locator"/>
-            
+
+            <!-- Parameters -->
+            <x:String x:Key="UrlAPI">https://salesapiservices.azurewebsites.net</x:String>
+
         </ResourceDictionary>
 
 
