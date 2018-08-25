@@ -35,7 +35,7 @@
             {
                 if (string.IsNullOrEmpty(this.ImagePath))
                 {
-                    return null;
+                    return "noproduct";
                 }
 
                 return $"https://salesbackend.azurewebsites.net/{this.ImagePath.Substring(1)}";
