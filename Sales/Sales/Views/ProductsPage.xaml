@@ -31,14 +31,18 @@
                                     Grid.Column="0"                                                                        
                                     Source="{Binding ImageFullPath}"
                                     WidthRequest="100">
-
                                 </Image>
-                                <Label
-                                    FontAttributes="Bold"
+                                <StackLayout
                                     Grid.Column="1"
-                                    Text="{Binding Description}"
                                     VerticalOptions="Center">
-                                </Label>
+                                    <Label
+                                    FontAttributes="Bold"                                    
+                                    Text="{Binding Description}">
+                                    </Label>
+                                    <Label
+                                        Text="{Binding Remarks}">                                        
+                                    </Label>
+                                </StackLayout>
                                 <Label
                                     Grid.Column="2"
                                     HorizontalOptions="End"
