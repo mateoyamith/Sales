@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Sales.ViewModels
+﻿namespace Sales.ViewModels
 {
-    class AddProductViewModel
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
+    public class AddProductViewModel : BaseViewModel
     {
+
     }
 }

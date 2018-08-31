@@ -8,6 +8,7 @@
     public class MainViewModel
     {
         public ProductsViewModel Products { get; set; }
+        public AddProductViewModel AddProduct { get; set; }
 
         public MainViewModel()
         {
@@ -24,6 +25,7 @@
 
         private async void GoToAddProduct()
         {
+            this.AddProduct = new AddProductViewModel();
             await Application.Current.MainPage.Navigation.PushAsync(new AddProductPage());
         }
     }

@@ -9,51 +9,53 @@
         <ToolbarItem Icon="ic_action_add_circle" Command="{Binding AddProductCommand}"></ToolbarItem>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout
-            BindingContext="{Binding Products}"
+        <ScrollView
+            BindingContext="{Binding Products}">
+            <StackLayout
             Padding="5">
-            <ListView
+                <ListView
                 HasUnevenRows="True"
                 IsRefreshing="{Binding IsRefreshing}"
                 IsPullToRefreshEnabled="True"
                 ItemsSource="{Binding Products}"
                 RefreshCommand="{Binding RefreshCommand}">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="2*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Image
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image
                                     Grid.Column="0"                                                                        
                                     Source="{Binding ImageFullPath}"
                                     WidthRequest="100">
-                                </Image>
-                                <StackLayout
+                                    </Image>
+                                    <StackLayout
                                     Grid.Column="1"
                                     VerticalOptions="Center">
-                                    <Label
+                                        <Label
                                     FontAttributes="Bold"                                    
                                     Text="{Binding Description}">
-                                    </Label>
+                                        </Label>
+                                        <Label
+                                        Text="{Binding Remarks}">
+                                        </Label>
+                                    </StackLayout>
                                     <Label
-                                        Text="{Binding Remarks}">                                        
-                                    </Label>
-                                </StackLayout>
-                                <Label
                                     Grid.Column="2"
                                     HorizontalOptions="End"
                                     Text="{Binding Price, StringFormat='{0:C2}'}"
                                     VerticalOptions="Center">
-                                </Label>                                
-                            </Grid>                            
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+                                    </Label>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
