@@ -11,7 +11,7 @@
             <StackLayout            
                 Padding="5">
                     <Image
-                        Source="noproduct">
+                        Source="{Binding ImageSource}">
                     </Image>
                     <Label
                         FontSize="Small"
